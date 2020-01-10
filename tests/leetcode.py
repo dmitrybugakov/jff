@@ -7,15 +7,18 @@ class BasicTestSuite(unittest.TestCase):
 
     @staticmethod
     def test_remove_duplicates() -> object:
-        assert solution.remove_duplicates([1, 2]) == 2, "Should be 2"
+        result: int = 2
+        assert solution.remove_duplicates([1, 2]) == result, "Should be {}".format(result)
 
     @staticmethod
     def test_is_palindrome() -> object:
-        assert solution.is_palindrome(101) == True, "Should be True"
+        result: bool = True
+        assert solution.is_palindrome(101) == True, "Should be {}".format(result)
 
     @staticmethod
     def test_median_of_two_sorted_arrays() -> object:
-        assert solution.median_of_two_sorted_arrays([1, 2], [3]) == 2, "Should be 2"
+        result: int = 2
+        assert solution.median_of_two_sorted_arrays([1, 2], [3]) == 2, "Should be {}".format(result)
 
 
 if __name__ == '__main__':

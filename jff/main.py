@@ -1,8 +1,9 @@
-from jff.puzzle.leetcode import solution
+from jff.puzzle import leetcode
+from jff.puzzle import hackerrank
 
 
 def main() -> object:
-    result: float = solution.median_of_two_sorted_arrays([1, 2], [3])
+    result: float = leetcode.solution.median_of_two_sorted_arrays([1, 2], [3])
     print(result)
 
 
