@@ -1,11 +1,8 @@
-from typing import List
-
 from jff.puzzle.leetcode import solution
 
 
 def main() -> object:
-    nums: List[int] = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
-    result: int = solution.remove_duplicates(nums)
+    result: float = solution.median_of_two_sorted_arrays([1, 2], [3])
     print(result)
 
 
