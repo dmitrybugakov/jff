@@ -11,23 +11,23 @@ class BasicTestSuite(unittest.TestCase):
         graph = Graph(graph_description)
         cls.graph = graph
 
-    def test_graph_edges(self) -> object:
+    def test_graph_edges(self) -> None:
         graph: Graph = copy.deepcopy(self.graph)
         result = [{'d', 'a'}, {'c', 'b'}]
         assert graph.edges() == result, "Should be {}".format(result)
 
-    def test_graph_vertices(self) -> object:
+    def test_graph_vertices(self) -> None:
         graph: Graph = copy.deepcopy(self.graph)
         result = ['a', 'b']
         assert graph.vertices() == result, "Should be {}".format(result)
 
-    def test_graph_add_vertex(self) -> object:
+    def test_graph_add_vertex(self) -> None:
         graph: Graph = copy.deepcopy(self.graph)
         graph.add_vertex(vertex='f')
         result = ['a', 'b', 'f']
         assert graph.vertices() == result, "Should be {}".format(result)
 
-    def test_graph_add_edge(self) -> object:
+    def test_graph_add_edge(self) -> None:
         graph: Graph = copy.deepcopy(self.graph)
         graph.add_edge(edge={'a', 'f'})
         result = [{'a', 'd'}, {'b', 'c'}, {'a', 'f'}]

@@ -6,7 +6,7 @@ from jff.puzzle.hackerrank import solution
 class BasicTestSuite(unittest.TestCase):
 
     @staticmethod
-    def test_remove_duplicates() -> object:
+    def test_remove_duplicates() -> None:
         result: int = 0
         assert solution.make_anagram("", "") == 0, "Should be {}".format(result)
 

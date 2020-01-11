@@ -1,10 +1,10 @@
 from jff.puzzle import leetcode
 from jff.puzzle import hackerrank
+from jff.puzzle import geeksforgeeks
+from jff.puzzle.geeksforgeeks.graph import Graph
 
 
-def main() -> object:
-    result: float = leetcode.solution.median_of_two_sorted_arrays([1, 2], [3])
-    print(result)
+def main() -> None:
 
 
 if __name__ == "__main__":

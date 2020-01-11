@@ -3,7 +3,7 @@ from typing import List, Dict, Set
 
 class Graph:
 
-    def __init__(self, graph_dict: Dict[str, List[str]] = None) -> object:
+    def __init__(self, graph_dict: Dict[str, List[str]] = None) -> None:
         """ initializes a graph object
             If no dictionary or None is given,
             an empty dictionary will be used
@@ -20,7 +20,7 @@ class Graph:
         """ returns the edges of a graph """
         return self.__generate_edges()
 
-    def add_vertex(self, vertex: str) -> object:
+    def add_vertex(self, vertex: str) -> None:
         """ If the vertex "vertex" is not in
             self.__graph_dict, a key "vertex" with an empty
             list as a value is added to the dictionary.
@@ -29,7 +29,7 @@ class Graph:
         if vertex not in self.__graph_dict:
             self.__graph_dict[vertex] = []
 
-    def add_edge(self, edge: Dict[str, str]) -> object:
+    def add_edge(self, edge: Dict[str, str]) -> None:
         """ assumes that edge is of type set, tuple or list;
             between two vertices can be multiple edges!
         """
