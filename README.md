@@ -1,1 +1,1 @@
-Repository contains some simple solutions for "leetcode/hackerrank" and unit tests.
+Repository contains some simple solutions for "leetcode/hackerrank/geeksforgeeks" and unit tests.
