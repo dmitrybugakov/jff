@@ -1,9 +1,9 @@
-from typing import List, Dict, Set
+from typing import List, Dict, Set, Any
 
 
 class Graph:
 
-    def __init__(self, graph_dict: Dict[str, List[str]] = None) -> None:
+    def __init__(self: Any, graph_dict: Dict[str, List[str]] = None) -> None:
         """ initializes a graph object
             If no dictionary or None is given,
             an empty dictionary will be used
@@ -12,15 +12,15 @@ class Graph:
             graph_dict = {}
         self.__graph_dict = graph_dict
 
-    def vertices(self) -> List[str]:
+    def vertices(self: Any) -> List[str]:
         """ returns the vertices of a graph """
         return list(self.__graph_dict.keys())
 
-    def edges(self) -> List[Set[str]]:
+    def edges(self: Any) -> List[Set[str]]:
         """ returns the edges of a graph """
         return self.__generate_edges()
 
-    def add_vertex(self, vertex: str) -> None:
+    def add_vertex(self: Any, vertex: str) -> None:
         """ If the vertex "vertex" is not in
             self.__graph_dict, a key "vertex" with an empty
             list as a value is added to the dictionary.
@@ -29,7 +29,7 @@ class Graph:
         if vertex not in self.__graph_dict:
             self.__graph_dict[vertex] = []
 
-    def add_edge(self, edge: Dict[str, str]) -> None:
+    def add_edge(self: Any, edge: Dict[str, str]) -> None:
         """ assumes that edge is of type set, tuple or list;
             between two vertices can be multiple edges!
         """
@@ -40,7 +40,7 @@ class Graph:
         else:
             self.__graph_dict[vertex1] = [vertex2]
 
-    def __generate_edges(self) -> List[Set[str]]:
+    def __generate_edges(self: Any) -> List[Set[str]]:
         """ A static method generating the edges of the
             graph "graph". Edges are represented as sets
             with one (a loop back to the vertex) or two
@@ -53,7 +53,7 @@ class Graph:
                     edges.append({vertex, neighbour})
         return edges
 
-    def __str__(self) -> str:
+    def __str__(self: Any) -> str:
         res = "vertices: "
         for k in self.__graph_dict:
             res += str(k) + " "
