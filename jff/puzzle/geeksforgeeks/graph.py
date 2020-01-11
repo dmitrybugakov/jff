@@ -12,6 +12,10 @@ class Graph:
             graph_dict = {}
         self.__graph_dict = graph_dict
 
+    def full(self: Any) -> Dict[str, List[str]]:
+        """ returns the graph dictionary"""
+        return self.__graph_dict
+
     def vertices(self: Any) -> List[str]:
         """ returns the vertices of a graph """
         return list(self.__graph_dict.keys())
@@ -29,7 +33,7 @@ class Graph:
         if vertex not in self.__graph_dict:
             self.__graph_dict[vertex] = []
 
-    def add_edge(self: Any, edge: Dict[str, str]) -> None:
+    def add_edge(self: Any, edge: Set[str]) -> None:
         """ assumes that edge is of type set, tuple or list;
             between two vertices can be multiple edges!
         """
