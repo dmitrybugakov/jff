@@ -6,5 +6,5 @@ setup(
     author='Dmitry Bugakov',
     author_email='dmitrybugakovdev@gmail.com',
     packages=find_packages(),
-    description='Puzzle_s solutions'
+    description='Puzzle_s solutions',
 )
