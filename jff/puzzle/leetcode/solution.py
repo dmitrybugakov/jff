@@ -1,5 +1,5 @@
 from heapq import merge
-from typing import List, Any
+from typing import List
 
 
 def remove_duplicates(nums: List[int]) -> int:
@@ -44,10 +44,16 @@ def get_no_zero_integers(n: int) -> List[int]:
 
 def minimum_flips(a: int, b: int, c: int) -> int:
     """returns the minimum flips to make a or b equal to c"""
-    print("a:{0} is {0:b}".format(a))
-    print("b:{0} is {0:b}".format(b))
-    print("c:{0} is {0:b}".format(c))
 
-    print("{0:b}".format((a ^ b)))
+    def process(x, y, z):
+        if x | y == z:
+            return 0
+        return 1 if z else x + y
 
-    return 0
+    count: int = 0
+    while a or b or c:
+        count += process(a & 1, b & 1, c & 1)
+        a >>= 1
+        b >>= 1
+        c >>= 1
+    return count

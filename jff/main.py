@@ -1,5 +1,3 @@
-from typing import Dict, List
-
 from jff.puzzle import leetcode
 from jff.puzzle.leetcode import solution
 from jff.puzzle import hackerrank
@@ -10,7 +8,7 @@ from jff.puzzle.geeksforgeeks.graph import Graph
 
 
 def main() -> None:
-    leetcode.solution.minimum_flips(2, 6, 5)
+    print(leetcode.solution.minimum_flips(2, 6, 5))
 
 
 if __name__ == "__main__":

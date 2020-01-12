@@ -25,6 +25,10 @@ class BasicTestSuite(unittest.TestCase):
         result: List[int] = [1, 1]
         assert solution.get_no_zero_integers(2) == result, self.errorMessage.format(result)
 
+    def test_minimum_flips(self: Any) -> None:
+        result: int = 3
+        assert solution.minimum_flips(2, 6, 5) == result, self.errorMessage.format(result)
+
 
 if __name__ == '__main__':
     unittest.main()
