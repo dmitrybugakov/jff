@@ -10,16 +10,7 @@ from jff.puzzle.geeksforgeeks.graph import Graph
 
 
 def main() -> None:
-    graph_description: Dict[str, List[str]] = {
-        'a': ['b'],
-        'b': ['a', 'c', 'd'],
-        'd': ['b', 'f'],
-        'c': ['b'],
-        'f': ['d']
-    }
-    graph: Graph = Graph(graph_description)
-    start: str = 'a'
-    geeksforgeeks.solution.breadth_first_search(graph=graph, start=start)
+    hackerrank.solution.make_anagram("abc", "bcd")
 
 
 if __name__ == "__main__":
