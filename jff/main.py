@@ -10,7 +10,7 @@ from jff.puzzle.geeksforgeeks.graph import Graph
 
 
 def main() -> None:
-    hackerrank.solution.make_anagram("abc", "bcd")
+    leetcode.solution.minimum_flips(2, 6, 5)
 
 
 if __name__ == "__main__":
