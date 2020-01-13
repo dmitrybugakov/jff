@@ -9,15 +9,7 @@ from jff.puzzle.geeksforgeeks.graph import Graph
 
 
 def main() -> None:
-    graph_description = {
-        'a': ['b'],
-        'b': ['a', 'c', 'd'],
-        'd': ['b'],
-        'c': ['b']
-    }
-    graph: Graph = Graph(graph_description)
-    start: str = 'a'
-    geeksforgeeks.solution.depth_first_search(graph=graph, start=start)
+    print(hackerrank.solution.alternating_characters("AAAABBBBCCC"))
 
 
 if __name__ == "__main__":

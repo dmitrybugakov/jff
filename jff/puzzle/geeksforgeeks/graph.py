@@ -25,15 +25,13 @@ class Graph:
         """ If the vertex "vertex" is not in
             self.__graph_dict, a key "vertex" with an empty
             list as a value is added to the dictionary.
-            Otherwise nothing has to be done.
-        """
+            Otherwise nothing has to be done. """
         if vertex not in self.__graph_dict__:
             self.__graph_dict__[vertex] = []
 
     def add_edge(self: Any, edge: Set[str]) -> None:
         """ assumes that edge is of type set, tuple or list;
-            between two vertices can be multiple edges!
-        """
+            between two vertices can be multiple edges! """
         edge = set(edge)
         (vertex1, vertex2) = tuple(edge)
         if vertex1 in self.__graph_dict__:
@@ -45,8 +43,7 @@ class Graph:
         """ A static method generating the edges of the
             graph "graph". Edges are represented as sets
             with one (a loop back to the vertex) or two
-            vertices
-        """
+            vertices """
         edges: List[Set[str]] = []
         for vertex in self.__graph_dict__:
             for neighbour in self.__graph_dict__[vertex]:
