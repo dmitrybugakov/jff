@@ -11,17 +11,13 @@ from jff.puzzle.geeksforgeeks.graph import Graph
 def main() -> None:
     graph_description = {
         'a': ['b'],
-        'b': ['a', 'c'],
+        'b': ['a', 'c', 'd'],
+        'd': ['b'],
         'c': ['b']
     }
-
     graph: Graph = Graph(graph_description)
     start: str = 'a'
     geeksforgeeks.solution.depth_first_search(graph=graph, start=start)
-
-    stack: Stack = Stack([1, 2, 3, 4])
-    print(stack.__get_container__())
-    print(stack == stack)
 
 
 if __name__ == "__main__":

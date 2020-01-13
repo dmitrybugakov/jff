@@ -6,10 +6,10 @@ class AnyStack:
         """ initializes a stack object """
         if init_state is None:
             init_state = []
-        self.__container = init_state
+        self.__container__ = init_state
 
     def __get_container__(self: Any) -> List[Any]:
-        return self.__container
+        return self.__container__
 
 
 class Stack(AnyStack):

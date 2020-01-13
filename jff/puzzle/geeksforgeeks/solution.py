@@ -3,6 +3,7 @@ from queue import Queue
 from typing import Dict
 
 from jff.puzzle.geeksforgeeks.graph import Graph
+from jff.puzzle.geeksforgeeks.stack import Stack
 
 
 def breadth_first_search(graph: Graph, start: str) -> None:
@@ -16,8 +17,6 @@ def breadth_first_search(graph: Graph, start: str) -> None:
 
     while queue:
         start = queue.pop()
-        print(start)
-
         for vertex in graph.full()[start]:
             if not visited[vertex]:
                 queue.append(vertex)
@@ -30,3 +29,11 @@ def depth_first_search(graph: Graph, start: str) -> None:
 
     visited: Dict[str, bool] = dict.fromkeys(graph.vertices(), False)
     visited[start] = True
+    stack: Stack = Stack([start])
+
+    while not stack.is_empty():
+        start = stack.pop()
+        for vertex in graph.full()[start]:
+            if not visited[vertex]:
+                stack.push(vertex)
+                visited[vertex] = True
