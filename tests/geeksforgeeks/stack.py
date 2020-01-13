@@ -1,6 +1,6 @@
 import copy
 import unittest
-from typing import Any, List
+from typing import Any
 
 from jff.puzzle.geeksforgeeks.stack import Stack
 
@@ -19,8 +19,8 @@ class BasicTestSuite(unittest.TestCase):
     def test_stack_push(self: Any) -> None:
         stack: Stack = copy.deepcopy(self.stack)
         stack.push(1)
-        result: List[Any] = [1]
-        assert stack.__get_container__() == result, self.errorMessage.format(result)
+        result: Stack = Stack([1])
+        assert stack == result, self.errorMessage.format(result)
 
     def test_stack_pop(self: Any) -> None:
         stack: Stack = copy.deepcopy(self.stack)

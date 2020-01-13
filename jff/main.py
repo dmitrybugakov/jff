@@ -21,6 +21,8 @@ def main() -> None:
 
     stack: Stack = Stack([1, 2, 3, 4])
     print(stack.__get_container__())
+    print(stack == stack)
+
 
 if __name__ == "__main__":
     main()

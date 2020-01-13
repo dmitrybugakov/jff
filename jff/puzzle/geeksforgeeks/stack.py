@@ -41,10 +41,10 @@ class Stack(AnyStack):
         """ prints the stack """
         print(self.__get_container__())
 
-    # def __eq__(self: Any, other: AnyStack) -> bool:
-    #     """Overrides the default implementation"""
-    #     return self.__get_container__() == other.__get_container__()
-    #
-    # def __ne__(self: Any, other: AnyStack) -> bool:
-    #     """Overrides the default implementation (unnecessary in Python 3)"""
-    #     return not self.__eq__(other)
+    def __eq__(self: Any, other: AnyStack) -> bool:
+        """Overrides the default implementation"""
+        return self.__get_container__() == other.__get_container__()
+
+    def __ne__(self: Any, other: AnyStack) -> bool:
+        """Overrides the default implementation (unnecessary in Python 3)"""
+        return not self.__eq__(other)
