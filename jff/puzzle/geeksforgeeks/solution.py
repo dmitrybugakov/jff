@@ -22,3 +22,11 @@ def breadth_first_search(graph: Graph, start: str) -> None:
             if not visited[vertex]:
                 queue.append(vertex)
                 visited[vertex] = True
+
+
+def depth_first_search(graph: Graph, start: str) -> None:
+    if start not in graph.vertices():
+        raise ValueError("Graph dosen't contain the vertex : {0}".format(start))
+
+    visited: Dict[str, bool] = dict.fromkeys(graph.vertices(), False)
+    visited[start] = True

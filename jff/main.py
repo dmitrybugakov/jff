@@ -1,4 +1,5 @@
 from jff.puzzle import leetcode
+from jff.puzzle.geeksforgeeks.stack import Stack
 from jff.puzzle.leetcode import solution
 from jff.puzzle import hackerrank
 from jff.puzzle.hackerrank import solution
@@ -8,8 +9,18 @@ from jff.puzzle.geeksforgeeks.graph import Graph
 
 
 def main() -> None:
-    print(leetcode.solution.minimum_flips(2, 6, 5))
+    graph_description = {
+        'a': ['b'],
+        'b': ['a', 'c'],
+        'c': ['b']
+    }
 
+    graph: Graph = Graph(graph_description)
+    start: str = 'a'
+    geeksforgeeks.solution.depth_first_search(graph=graph, start=start)
+
+    stack: Stack = Stack([1, 2, 3, 4])
+    print(stack.__get_container__())
 
 if __name__ == "__main__":
     main()

@@ -4,10 +4,7 @@ from typing import List, Dict, Set, Any
 class Graph:
 
     def __init__(self: Any, graph_dict: Dict[str, List[str]] = None) -> None:
-        """ initializes a graph object
-            If no dictionary or None is given,
-            an empty dictionary will be used
-        """
+        """ initializes a graph object """
         if graph_dict is None:
             graph_dict = {}
         self.__graph_dict = graph_dict
