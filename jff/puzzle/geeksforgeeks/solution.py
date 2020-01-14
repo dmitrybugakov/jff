@@ -2,11 +2,11 @@ from collections import deque
 from queue import Queue
 from typing import Dict
 
-from jff.puzzle.geeksforgeeks.graph import Graph
+from jff.puzzle.geeksforgeeks.graph import GraphDictionary
 from jff.puzzle.geeksforgeeks.stack import Stack
 
 
-def breadth_first_search(graph: Graph, start: str) -> None:
+def breadth_first_search(graph: GraphDictionary, start: str) -> None:
     if start not in graph.vertices():
         raise ValueError("Graph dosen't contain the vertex : {0}".format(start))
 
@@ -23,7 +23,7 @@ def breadth_first_search(graph: Graph, start: str) -> None:
                 visited[vertex] = True
 
 
-def depth_first_search(graph: Graph, start: str) -> None:
+def depth_first_search(graph: GraphDictionary, start: str) -> None:
     if start not in graph.vertices():
         raise ValueError("Graph dosen't contain the vertex : {0}".format(start))
 
