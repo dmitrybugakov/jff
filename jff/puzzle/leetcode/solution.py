@@ -57,3 +57,32 @@ def minimum_flips(a: int, b: int, c: int) -> int:
         b >>= 1
         c >>= 1
     return count
+
+
+def build_an_array_with_stack_operations(target: List[int], n: int) -> List[str]:
+    """
+    Given an array target and an integer n. In each iteration, you will read a number from  list = {1,2,3..., n}.
+
+    Build the target array using the following operations:
+
+    Push: Read a new element from the beginning list, and push it in the array.
+    Pop: delete the last element of the array.
+    If the target array is already built, stop reading more elements.
+    """
+    PUSH_OPERATION: str = "Push"
+    POP_OPERATION: str = "Pop"
+    result: List[str] = []
+    index: int = 1
+    for element in target:
+        if element == index:
+            result.append(PUSH_OPERATION)
+            index = element + 1
+        else:
+            while index < element:
+                result.append(PUSH_OPERATION)
+                result.append(POP_OPERATION)
+                index += 1
+            result.append(PUSH_OPERATION)
+            index = element + 1
+
+    return result
