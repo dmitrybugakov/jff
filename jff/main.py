@@ -1,9 +1,10 @@
-from jff.puzzle.hackerrank.interview_preparation import is_valid
+from jff.puzzle.hackerrank.interview_preparation import substring_count
 
 
 def main() -> None:
-    value: str = "abc"
-    result = is_valid(value)
+    length: int = 5
+    value: str = "aabaa"
+    result = substring_count(length=length, value=value)
     print(result)
 
 

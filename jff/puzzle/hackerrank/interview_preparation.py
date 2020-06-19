@@ -47,3 +47,40 @@ def is_valid(value: str) -> bool:
             return True
 
     return False
+
+
+def substring_count(length: int, value: str) -> int:
+    """
+    A string is said to be a special string if either of two conditions is met:
+    All of the characters are the same, e.g. aaa.
+    All characters except the middle one are the same, e.g. aadaa.
+    return an integer representing the number of special substrings that can be formed from the given string.
+    """
+    result: int = 0
+
+    for step in range(2, length + 1):
+        left_border: int = 0
+        right_border: int = step - 1
+
+        while right_border < length:
+            i = left_border
+            j = right_border
+            middle: int = left_border + right_border >> 1
+
+            if step % 2 == 1:
+                while (i < j) and ((i + 1 == middle and value[i] == value[i + 2]) or (value[i] == value[i + 1])):
+                    if i + 1 == middle:
+                        i += 2
+                    else:
+                        i += 1
+            else:
+                while i < j and value[i] == value[i + 1]:
+                    i += 1
+
+            if i == j:
+                result += 1
+
+            left_border += 1
+            right_border += 1
+
+    return length + result
