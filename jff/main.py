@@ -1,11 +1,9 @@
-from jff.puzzle.hackerrank.interview_preparation import substring_count
+from jff.algorithms.stanford import multiplication, karatsuba
 
 
 def main() -> None:
-    length: int = 5
-    value: str = "aabaa"
-    result = substring_count(length=length, value=value)
-    print(result)
+    print(multiplication(x="1234", y="2341", n=4))
+    print(karatsuba(x="1234", y="2341", n=4))
 
 
 if __name__ == "__main__":
